@@ -443,6 +443,7 @@ ul {
   transition-timing-function: ease-out;
   -webkit-animation: cursorAnim 0.7s infinite alternate;
   animation: cursorAnim 0.7s infinite alternate;
+  pointer-events: none;
 }
 
 .cursor2 {
@@ -458,6 +459,7 @@ ul {
   transition-timing-function: ease-out;
   -webkit-animation: cursorAnim2 0.7s infinite alternate;
   animation: cursorAnim2 0.7s infinite alternate;
+  pointer-events: none;
 }
 
 .clickExpand {

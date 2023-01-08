@@ -7,6 +7,7 @@
     transition-duration: 100ms;
     transition-timing-function: ease-out;
     animation: cursorAnim .7s infinite alternate;
+    pointer-events: none; // allows to use links through the animation
 }
 
 .cursor2 {
@@ -19,6 +20,7 @@
     transition-duration: 100ms;
     transition-timing-function: ease-out; 
     animation: cursorAnim2 .7s infinite alternate;
+    pointer-events: none; // allows to use links through the animation
 }
 
 // add class by clicking somewhere
