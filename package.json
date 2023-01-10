@@ -29,5 +29,7 @@
     "url": "https://github.com/AlainNiessen/Portfolio/issues"
   },
   "homepage": "https://github.com/AlainNiessen/Portfolio#readme",
-  "dependencies": {}
+  "dependencies": {
+    "flag-icons": "^6.6.6"
+  }
 }

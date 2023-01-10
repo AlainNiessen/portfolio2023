@@ -1,8 +1,10 @@
 /* --- NAVIGATION BAR STYLE --- */
 
 nav {
+    width: 100%;
+    padding: 0 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     min-height: 8vh;
     background-color: map-get($map: $colors, $key: "main2");
@@ -17,16 +19,16 @@ nav {
 
 .nav-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 8vh;
-    width: 40%;
+    width: 50%;
     a {
         color: rgb(230, 230, 230);
         text-decoration: none;
         letter-spacing: 0.2rem;
        // font-weight: bold;
-        font-size: .9rem;
+        font-size: .8rem;
     }
     li {
         display: flex;
@@ -37,10 +39,156 @@ nav {
 }
 
 .hamburger {
+    display: none;
+    width: 2rem;
+    height: 1.5rem;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
     div {
-        width: 1.8rem;
-        height: 0.2rem;
-        background-color: rgb(230, 230, 230);
-        margin: .3rem;
+        position: absolute;
+        height: 0.20rem;
+        width: 100%;
+        background: rgb(230, 230, 230);
+        border-radius: 0.4rem;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
+        &:nth-child(1) {
+            top: 0rem;
+        }
+        &:nth-child(2) {
+            top: 0.75rem;
+        }
+        &:nth-child(3) {
+            top: 1.5rem;
+        }
     }
 }
+.flag {   
+    padding: .2rem;
+    width: 1.5rem;
+    height: 2.5vh;   
+    .fib {
+        width: 100%;
+        aspect-ratio: 3;
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;           
+    }
+}
+
+
+//Media Query
+@media screen and (max-width: 1200px) {
+    .logo {        
+        font-size: 1rem;
+    }
+    .nav-links {    
+        width: 60%;       
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    nav {      
+        padding: 0 1rem;       
+    }
+    .logo {
+        
+        font-size: 0.9rem;
+    }
+    .nav-links {    
+        width: 66%;
+        a {
+            font-size: .6rem;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; // for hide the menu out of screen
+    }
+    nav {
+        padding: 0 2.5rem;
+    }
+    .nav-links {    
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: map-get($map: $colors, $key: "main2");
+        width: 50%;
+        transform: translateX(100%); // will move the menu out of screen
+        transition: transform 500ms ease-in;
+        li {
+            opacity: 0;
+        }
+        a {
+            font-size: .9rem;
+        }
+        // add class for Hamburger-Animation
+        &.nav-active {
+            transform: translateX(0%);
+        }
+    }
+    .hamburger {
+        display: block;
+        // toggle class for Hamburger to cross and back
+        &.cross {
+            .line1 {
+                top: 0.75rem;
+                -webkit-transform: rotate(135deg);
+                -moz-transform: rotate(135deg);
+                -o-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+            .line2 {
+                opacity: 0;
+                left: -60px;
+            }
+            .line3 {
+                top: 0.75rem;
+                -webkit-transform: rotate(-135deg);
+                -moz-transform: rotate(-135deg);
+                -o-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+        }
+    }
+}
+
+
+
+// Menu Animation Fade
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }    
+}
+
