@@ -1,1 +1,44 @@
+/* --- INTRO SECTION STYLE --- */
+
+.m-main-intro {
+    padding-top: 8vh; // start at the bottom of fixed header
+    height: 100vh;
+    scroll-margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-main-intro-text {
+    text-align: center;
+    p, h1, h2, img {        
+        margin-bottom: 1rem;
+    }
+    p, h1, h2 {        
+        color: map-get($map: $colors, $key: 'main2');
+    }    
+    h1 {
+        font-size: 3.5rem;    
+    }
+    h2 {
+        font-size: 1.5rem;   
+        letter-spacing: 0.3rem;
+        //text-indent: 0.3rem; //indent h3 1rem for center text with letter-spacing, because letter spacing is not applied on first letter
+        animation: color 10s linear infinite;       
+    }  
+    img {
+        width: 30%;  
+    }    
+}
+
+.m-main-intro-linkbox {
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
 

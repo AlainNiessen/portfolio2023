@@ -1,0 +1,86 @@
+.m-main-about {
+    background-color: map-get($map: $colors, $key: 'main1');
+    scroll-margin-top: 8vh;    
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        color: map-get($map: $colors, $key: 'main2');
+        padding-top: 2rem;        
+    }
+    .m-main-about-infobox{
+        display: flex;
+        h1 {
+            font-size: 2.5rem;
+        }
+        .m-main-about-infobox-personel, .m-main-about-infobox-skills {
+            flex: 0.5;
+            height: auto;
+            margin: 1rem;
+            p {
+                margin: 1.5rem 0 1.5rem 0;
+                color: map-get($map: $colors, $key: 'main2');
+            }  
+            .m-main-about-infobox-skills-advanced, .m-main-about-infobox-skills-good, .m-main-about-infobox-skills-basic {
+                h2 {
+                    font-size: 1.8rem;
+                    text-align: center;
+                    color: map-get($map: $colors, $key: 'main2');  
+                    margin: 2rem 0 2rem 0;  
+                }
+                .icons {
+                    display: flex;
+                    flex-direction: column;
+                    .icons-box {
+                        display: flex;
+                        margin: 1rem 0;
+                        .icons-box-img{
+                            flex: 0.25;
+                            img {                              
+                                width: 3rem;
+                                height: 3rem;                                
+                            }
+                        }                        
+                    }                    
+                }
+            }
+        }
+        .m-main-about-infobox-personel {                      
+            .m-main-about-infobox-social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                max-width: 80%;
+                margin: 0 auto;
+                height: 2.5rem;            
+                a {                       
+                    width: 100%;
+                    padding: 0;
+                    height: 2.5rem;
+                    i {
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        color: map-get($map: $colors, $key: 'main2');
+                        font-size: 2rem;                    
+                        &:hover {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }            
+            }             
+        }
+        .m-main-about-infobox-skills {
+            padding-bottom: 2rem;;
+        }
+    }    
+}
+
+
+//media query
+//Media Query for smartphone => tablette
+@media screen and (min-width: 1200px) {
+    .m-main-about {
+        height: calc(100vh - 8vh);          
+    } 
+} 

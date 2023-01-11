@@ -51,6 +51,16 @@ ul {
     margin: 0 auto;
 }
 
+//btn-custom
+.btn-custom {
+    background-color: map-get($map: $colors, $key: 'main2');
+    color: map-get($map: $colors, $key: 'main1');
+    &:hover {
+        background-color: map-get($map: $colors, $key: 'main1');
+        color: map-get($map: $colors, $key: 'main2');
+    }
+}
+
 .langError-container {
     width: 100%;
     max-width: 80%;

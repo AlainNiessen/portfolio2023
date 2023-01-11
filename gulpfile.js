@@ -1,14 +1,11 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const browserSync = require ('browser-sync').create();
-const minCss = require ('gulp-clean-css');
+const browserSync = require('browser-sync').create();
+const minCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
-const uglify = require ('gulp-terser');
-const concat = require ('gulp-concat');
-const imagemin = import('gulp-imagemin')
+const uglify = require('gulp-terser');
+const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
-const newer = require('gulp-newer');
-
 
 
 //function that compile scss into css
@@ -70,23 +67,6 @@ function compress () {
 
 }
 
-//function for compressing images
-function compressImg () {
-    return gulp
-
-    // 1. where is my img file?
-        .src('./src/img/**/*') // * for all img-files
-
-    // 2. add the newer pipe to pass through newer images only
-        .pipe(newer("./dist/img"))
-
-    // 3.Compress img-files
-        .pipe(imageMin())
-
-    // 4. where do I save the compressed img-files 
-        .pipe(gulp.dest('./dist/img'));   
-    
-}
 
 //watching and updating automatically
 function watch () {
@@ -100,11 +80,9 @@ function watch () {
     gulp.watch('./src/scss/**/*.scss', scss); //compiling automatically    
     gulp.watch('./*.html').on('change', browserSync.reload); // refresh browser
     gulp.watch('./src/js/**/*.js', compress); //watching for every change in all js-files and execute function compress automatically
-    gulp.watch('./src/img/**/*', compressImg); //watching for every changes in src-img-folder and execute compressImg function
 }
 
 //Exporting all functions
 exports.scss = scss;
 exports.compress = compress;
-exports.compressImg = compressImg;
 exports.watch = watch;
