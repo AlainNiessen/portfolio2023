@@ -73,19 +73,6 @@ ul {
     h1 {
         text-align: center;
     }
-    .langError {
-        display: inline-block;
-        background-color: map-get($map: $colors, $key: 'main1');
-        color: map-get($map: $colors, $key: 'main2');
-        border: 0.05rem solid map-get($map: $colors, $key: 'main2');
-        border-radius: 0.4rem;
-        margin-top: 2rem;
-        
-        &:hover {
-            background-color: map-get($map: $colors, $key: 'main2');
-            color: map-get($map: $colors, $key: 'main1');
-        }
-    }
 }
 
 

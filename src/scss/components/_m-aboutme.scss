@@ -8,18 +8,20 @@
         padding-top: 2rem;        
     }
     .m-main-about-infobox{
-        display: flex;
+        display: flex;       
         h1 {
             font-size: 2.5rem;
         }
-        .m-main-about-infobox-personel, .m-main-about-infobox-skills {
-            flex: 0.5;
+        .m-main-about-infobox-personel, .m-main-about-infobox-skills {            
             height: auto;
             margin: 1rem;
             p {
                 margin: 1.5rem 0 1.5rem 0;
                 color: map-get($map: $colors, $key: 'main2');
             }  
+            .cv {
+                text-align: center;
+            }
             .m-main-about-infobox-skills-advanced, .m-main-about-infobox-skills-good, .m-main-about-infobox-skills-basic {
                 h2 {
                     font-size: 1.8rem;

@@ -1,8 +1,11 @@
+<?php
+include_once "translation.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio Alain Niessen</title>
         <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
@@ -13,6 +16,9 @@
         <link rel="stylesheet" href="dist/css/min-screen.css" type="text/css">
     </head>
     <body>
+        <?php
+        if($displaySite) {
+        ?>
         <!-- empty div for cursor animation-->
         <div class="cursor"></div>
         <div class="cursor2"></div>
@@ -33,21 +39,29 @@
                     </div>
                     <ul class="nav-links">
                         <li>
-                            <a href="#intro">Home</a>
+                            <a href="#intro">
+                                Home
+                            </a>
                         </li>
                         <li>
-                            <a href="#aboutme">About Me</a>
+                            <a href="#aboutme">
+                                <?php echo $menu_about; ?>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Projects</a>
+                            <a href="#">
+                                <?php echo $menu_projects; ?>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#">
+                                <?php echo $menu_contact; ?>
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="flag"><span class="fi fi-de fib flag-icon-squared"></span> </a>
-                            <a href="#" class="flag"><span class="fi fi-fr fib flag-icon-squared"></span> </a>
-                            <a href="#" class="flag"><span class="fi fi-gb fib flag-icon-squared"></span> </a>                        
+                            <a href="index.php?lang=de" class="flag"><span class="fi fi-de fib flag-icon-squared"></span> </a>
+                            <a href="index.php?lang=fr" class="flag"><span class="fi fi-fr fib flag-icon-squared"></span> </a>
+                            <a href="index.php?lang=en" class="flag"><span class="fi fi-gb fib flag-icon-squared"></span> </a>                        
                         </li>
                     </ul>
                     <div class="hamburger">
@@ -64,15 +78,19 @@
             <section class="m-main-intro" id="intro">                    
                 <div class="m-main-intro-text">
                     <h1>Alain Niessen</h1>
-                    <h2>WEBDEVELOPPER</h2>
+                    <h2><?php echo $intro_title; ?></h2>
                     <p>Frontend / Backend</p>
                     <img src="dist/img/portfolio2023.jpg" alt="Portrait" title="Portrait">
                     <p>
-                        Welcome to my portfolio! Would you like to learn more about me and my work?
+                        <?php echo $intro_text; ?>
                     </p>  
                     <div class="m-main-intro-linkbox">
-                        <a href="#aboutme" class="btn btn-primary btn-custom">About me</a>
-                        <a href="#" class="btn btn-primary btn-custom">Projects</a>
+                        <a href="#aboutme" class="btn btn-primary btn-custom">
+                            <?php echo $intro_btn_about; ?>
+                        </a>
+                        <a href="#" class="btn btn-primary btn-custom">
+                            <?php echo $intro_btn_projects; ?>
+                        </a>
                     </div>                          
                 </div>            
             </section>        
@@ -95,8 +113,10 @@
                                     </p>
                                     <p>
                                         You can download my CV under the following link and get a detailed overview of my professional career, my experiences and my other interests:
-                                    </p>                                                                           
-                                    <a href="#" download="#" class="btn btn-primary btn-custom">Download CV</a>                                   
+                                    </p>
+                                    <div class="cv">
+                                        <a href="#" download="#" class="btn btn-primary btn-custom">Download CV</a>
+                                    </div>                                                                       
                                     <p>
                                         You can see my social media presence under the following links:
                                     </p>
@@ -139,7 +159,7 @@
                                                     <img src="dist/img/icons/jquery.png" alt="JQUERY" title="JQUERY"/>
                                                 </div>                                             
                                                 <div class="icons-box-img">
-                                                    <img src="dist/img/icons/symfony.jpg" alt="SYMFONY" title="SYMFONY"/> 
+                                                    <img src="dist/img/icons/symfony.png" alt="SYMFONY" title="SYMFONY"/> 
                                                 </div>                                                                                                                                   
                                             </div>                                                                                                                                                       
                                         </div>
@@ -160,6 +180,16 @@
                                                 <div class="icons-box-img">
                                                     <img src="dist/img/icons/wordpress.PNG" alt="WORDPRESS" title="WORDPRESS"/>   
                                                 </div>                                                                                  
+                                            </div>                                                                                                                                                                                                  
+                                        </div>
+                                        <div class="icons">
+                                            <div class="icons-box">
+                                                <div class="icons-box-img">
+                                                    <img src="dist/img/icons/github.jpg" alt="GITHUB" title="GITHUB"/>
+                                                </div>                                                      
+                                                <div class="icons-box-img">
+                                                    <img src="dist/img/icons/vsc.png" alt="VISUAL STUDIO CODE" title="VISUAL STUDIO CODE"/>
+                                                </div>                                                      
                                             </div>                                                                                                                                                                                                  
                                         </div>
                                     </div>                    
@@ -192,5 +222,15 @@
       
     <!--Implication Javascript-->
     <script src="dist/js/min-all.js"></script>
+    <?php
+        } else {
+        ?>
+        <div class="langError-container">
+            <h1>Language does not exist</h1>
+            <a class="btn btn-primary btn-custom" href="index.php?lang=en">Back to site</a>
+        </div>        
+        <?php
+        }
+        ?>
     </body>
 </html>

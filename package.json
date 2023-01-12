@@ -9,11 +9,13 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
     "gulp-imagemin": "^8.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
+    "php-include-html": "^1.4.6",
     "sass": "^1.57.1"
   },
   "scripts": {
@@ -30,6 +32,7 @@
   },
   "homepage": "https://github.com/AlainNiessen/Portfolio#readme",
   "dependencies": {
-    "flag-icons": "^6.6.6"
+    "flag-icons": "^6.6.6",
+    "gulp-pump": "0.0.2"
   }
 }

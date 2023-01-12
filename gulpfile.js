@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const connect = require('gulp-connect-php'); // because of index.php
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const minCss = require('gulp-clean-css');
@@ -70,15 +71,14 @@ function compress () {
 
 //watching and updating automatically
 function watch () {
-    browserSync.init ({
-        //set up the server
-        server: {
-            baseDir: './'
-        }
-    });
+    connect.server({}, function (){
+        browserSync.init({
+          proxy: '127.0.0.1:8000'
+        });
+      });
     //watching for changes
     gulp.watch('./src/scss/**/*.scss', scss); //compiling automatically    
-    gulp.watch('./*.html').on('change', browserSync.reload); // refresh browser
+    gulp.watch('./*.php').on('change', browserSync.reload); // refresh browser
     gulp.watch('./src/js/**/*.js', compress); //watching for every change in all js-files and execute function compress automatically
 }
 
