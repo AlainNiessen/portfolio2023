@@ -59,9 +59,24 @@ include_once "translation.php";
                             </a>
                         </li>
                         <li>
-                            <a href="index.php?lang=de" class="flag"><span class="fi fi-de fib flag-icon-squared"></span> </a>
-                            <a href="index.php?lang=fr" class="flag"><span class="fi fi-fr fib flag-icon-squared"></span> </a>
-                            <a href="index.php?lang=en" class="flag"><span class="fi fi-gb fib flag-icon-squared"></span> </a>                        
+                            <?php
+                                if($lang == "en"):
+                            ?>
+                                <a href="index.php?lang=de" class="flag"><span class="fi fi-de fib flag-icon-squared"></span></a>
+                                <a href="index.php?lang=fr" class="flag"><span class="fi fi-fr fib flag-icon-squared"></span></a>
+                            <?php
+                                elseif($lang == "fr"):
+                            ?>
+                                <a href="index.php?lang=de" class="flag"><span class="fi fi-de fib flag-icon-squared"></span></a>
+                                <a href="index.php?lang=en" class="flag"><span class="fi fi-gb fib flag-icon-squared"></span></a>
+                            <?php
+                                elseif($lang == "de"):
+                            ?>  
+                                    <a href="index.php?lang=fr" class="flag"><span class="fi fi-fr fib flag-icon-squared"></span></a>
+                                    <a href="index.php?lang=en" class="flag"><span class="fi fi-gb fib flag-icon-squared"></span></a>
+                            <?php
+                                endif;
+                            ?>                                                  
                         </li>
                     </ul>
                     <div class="hamburger">
