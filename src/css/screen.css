@@ -432,7 +432,7 @@ ul {
 .cursor {
   width: 1rem;
   height: 1rem;
-  border: 0.1rem solid rgb(190, 190, 190);
+  border: 0.1rem solid rgb(221, 221, 221);
   border-radius: 50%;
   position: absolute;
   -webkit-transition-duration: 100ms;
@@ -447,7 +447,7 @@ ul {
 .cursor2 {
   width: 1.5rem;
   height: 1.5rem;
-  border: 0.1rem solid rgb(190, 190, 190);
+  border: 0.1rem solid rgb(221, 221, 221);
   opacity: 0.5;
   border-radius: 50%;
   position: absolute;
@@ -540,6 +540,7 @@ ul {
 /* --- NAVIGATION BAR STYLE --- */
 header {
   position: fixed;
+  z-index: 900;
   width: 100%;
   background-color: rgb(0, 122, 126);
 }
@@ -825,13 +826,7 @@ nav {
 .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .cv, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .cv {
   text-align: center;
 }
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-advanced h2, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-good h2, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-basic h2, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-advanced h2, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-good h2, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-basic h2 {
-  font-size: 1.8rem;
-  text-align: center;
-  color: rgb(0, 122, 126);
-  margin: 2rem 0 2rem 0;
-}
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-advanced .icons, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-good .icons, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-basic .icons, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-advanced .icons, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-good .icons, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-basic .icons {
+.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .icons, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -840,21 +835,21 @@ nav {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-advanced .icons .icons-box, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-good .icons .icons-box, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-basic .icons .icons-box, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-advanced .icons .icons-box, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-good .icons .icons-box, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-basic .icons .icons-box {
+.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .icons .icons-box, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .icons .icons-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0;
 }
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-advanced .icons .icons-box .icons-box-img, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-good .icons .icons-box .icons-box-img, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-basic .icons .icons-box .icons-box-img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-advanced .icons .icons-box .icons-box-img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-good .icons .icons-box .icons-box-img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-basic .icons .icons-box .icons-box-img {
+.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .icons .icons-box .icons-box-img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .icons .icons-box .icons-box-img {
   -webkit-box-flex: 0.25;
   -ms-flex: 0.25;
   flex: 0.25;
   text-align: center;
 }
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-advanced .icons .icons-box .icons-box-img img, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-good .icons .icons-box .icons-box-img img, .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-skills-basic .icons .icons-box .icons-box-img img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-advanced .icons .icons-box .icons-box-img img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-good .icons .icons-box .icons-box-img img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .m-main-about-infobox-skills-basic .icons .icons-box .icons-box-img img {
-  width: 3rem;
-  height: 3rem;
+.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .icons .icons-box .icons-box-img img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .icons .icons-box .icons-box-img img {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-social {
   display: -webkit-box;
@@ -890,8 +885,143 @@ nav {
   padding-bottom: 2rem;
 }
 
+/* --- Portfolio Style --- */
+.m-main-projects {
+  background-color: white;
+  height: 100vh;
+  scroll-margin-top: 8vh;
+  margin-top: 3rem;
+}
+.m-main-projects h1, .m-main-projects h3, .m-main-projects p {
+  text-align: center;
+  color: rgb(0, 122, 126);
+}
+.m-main-projects h1 {
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+.m-main-projects h3 {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+.m-main-projects .m-portfolio-projects {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.m-main-projects .show-project-details {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border: 0.1rem solid rgb(0, 122, 126);
+  border-radius: 0.4rem;
+  top: -5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+.m-main-projects .show-project-details .back-to-page {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.m-main-projects .show-project-details h2, .m-main-projects .show-project-details p, .m-main-projects .show-project-details li {
+  text-align: center;
+  color: rgb(0, 122, 126);
+  margin: 1rem;
+}
+.m-main-projects .show-project-details ul li {
+  list-style: none;
+  font-size: 0.7rem;
+}
+.m-main-projects .show-project-details .buttonBox {
+  width: 100%;
+  max-width: 80%;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.m-main-projects .show-project-details.show {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.m-main-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  max-width: 80%;
+  margin: 0.5rem auto 2rem auto;
+}
+.m-main-project .m-main-project-illustration {
+  cursor: pointer;
+  width: 13rem;
+  height: 10rem;
+  border-radius: 0.4rem;
+  display: block;
+  position: relative;
+  background-color: rgb(0, 122, 126);
+  border: 0.05rem solid rgb(0, 122, 126);
+}
+.m-main-project .m-main-project-illustration .m-main-project-img {
+  border-radius: 0.4rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.m-main-project .m-main-project-illustration .m-main-project-icon {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.m-main-project:hover .m-main-project-img {
+  opacity: 0.5;
+}
+.m-main-project:hover .m-main-project-icon {
+  display: block;
+  opacity: 1;
+}
+.m-main-project h3 {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
 @media screen and (min-width: 1200px) {
-  .m-main-about {
-    height: 92vh;
+  .m-main-projects .m-portfolio-projects {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }

@@ -1,3 +1,133 @@
+/* --- Portfolio Style --- */
+.m-main-projects {
+    background-color: map-get($map: $colors, $key: 'main1');
+    height: 100vh; 
+    scroll-margin-top: 8vh; 
+    margin-top: 3rem; 
+    h1, h3, p {                 
+        text-align: center;
+        color: map-get($map: $colors, $key: 'main2');          
+    }
+    h1 {
+        font-size: 3rem;
+        padding-top: 2rem;  
+    }  
+    h3 {
+        margin: 1rem 0;
+        font-size: 1.3rem;
+    }
+    .m-portfolio-projects {
+        position: relative;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .show-project-details {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+        background-color: map-get($map: $colors, $key: 'main1');
+        border: 0.1rem solid map-get($map: $colors, $key: 'main2');
+        border-radius: 0.4rem;
+        top: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all 1s ease-in;
+        .back-to-page {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;           
+        }
+        h2, p, li {
+            text-align: center;
+            color: map-get($map: $colors, $key: 'main2'); 
+            margin: 1rem  
 
+        }
+        ul {
+            li {
+                list-style: none;
+                font-size: .7rem;
+            }
+        }
+        .buttonBox {
+            width: 100%;
+            max-width: 80%;
+            margin: 1rem auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        &.show {
+            opacity: 1;
+            z-index: 2;
+            transition: all 1s ease-out;
+        }
+    }
+} 
+
+.m-main-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: map-get($map: $colors, $key: "main1");    
+    width: 100%;
+    max-width: 80%;
+    margin: 0.5rem auto 2rem auto;
+    .m-main-project-illustration {
+        cursor: pointer;
+        width: 13rem;
+        height: 10rem;
+        border-radius: 0.4rem;
+        display: block;
+        position: relative; //For place icon in absolute
+        background-color: map-get($map: $colors, $key: 'main2');
+        border: 0.05rem solid map-get($map: $colors, $key: 'main2');           
+        .m-main-project-img {  
+            border-radius: 0.4rem;           
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: block; //to fill all the box, otherwhise there is a little marge on the bottom!!!    
+        }     
+        //Icon glasses unvisible
+        .m-main-project-icon {
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;        
+        } 
+    }        
+    &:hover {
+        .m-main-project-img {           
+            opacity: .5;           
+        }
+        .m-main-project-icon {
+            display: block;
+            opacity: 1;
+        }
+    }    
+    h3 {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 1.1rem;        
+    }
+}
+
+//media query tablette to pc
+@media screen and (min-width: 1200px) {
+    .m-main-projects {
+        .m-portfolio-projects {
+            width: 100%;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
 
  

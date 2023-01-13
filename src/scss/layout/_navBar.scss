@@ -1,6 +1,7 @@
 /* --- NAVIGATION BAR STYLE --- */
 header {
     position: fixed;
+    z-index: 900;
     width: 100%;
     background-color: map-get($map: $colors, $key: "main2");
 }

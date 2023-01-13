@@ -49,7 +49,7 @@ include_once "translation.php";
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#projects">
                                 <?php echo $menu_projects; ?>
                             </a>
                         </li>
@@ -62,18 +62,18 @@ include_once "translation.php";
                             <?php
                                 if($lang == "en"):
                             ?>
-                                <a href="index.php?lang=de" class="flag"><span class="fi fi-de fib flag-icon-squared"></span></a>
-                                <a href="index.php?lang=fr" class="flag"><span class="fi fi-fr fib flag-icon-squared"></span></a>
+                                <a href="index.php?lang=de" class="flag" data-lang="de"><span class="fi fi-de fib flag-icon-squared"></span></a>
+                                <a href="index.php?lang=fr" class="flag" data-lang="fr"><span class="fi fi-fr fib flag-icon-squared"></span></a>
                             <?php
                                 elseif($lang == "fr"):
                             ?>
-                                <a href="index.php?lang=de" class="flag"><span class="fi fi-de fib flag-icon-squared"></span></a>
-                                <a href="index.php?lang=en" class="flag"><span class="fi fi-gb fib flag-icon-squared"></span></a>
+                                <a href="index.php?lang=de" class="flag" data-lang="de"><span class="fi fi-de fib flag-icon-squared"></span></a>
+                                <a href="index.php?lang=en" class="flag" data-lang="en"><span class="fi fi-gb fib flag-icon-squared"></span></a>
                             <?php
                                 elseif($lang == "de"):
                             ?>  
-                                    <a href="index.php?lang=fr" class="flag"><span class="fi fi-fr fib flag-icon-squared"></span></a>
-                                    <a href="index.php?lang=en" class="flag"><span class="fi fi-gb fib flag-icon-squared"></span></a>
+                                    <a href="index.php?lang=fr" class="flag" data-lang="fr"><span class="fi fi-fr fib flag-icon-squared"></span></a>
+                                    <a href="index.php?lang=en" class="flag" data-lang="en"><span class="fi fi-gb fib flag-icon-squared"></span></a>
                             <?php
                                 endif;
                             ?>                                                  
@@ -103,7 +103,7 @@ include_once "translation.php";
                         <a href="#aboutme" class="btn btn-primary btn-custom">
                             <?php echo $intro_btn_about; ?>
                         </a>
-                        <a href="#" class="btn btn-primary btn-custom">
+                        <a href="#projects" class="btn btn-primary btn-custom">
                             <?php echo $intro_btn_projects; ?>
                         </a>
                     </div>                          
@@ -148,87 +148,83 @@ include_once "translation.php";
                                     <h1>Skills</h1>  
                                     <p>
                                         Skills are an assessment of abilities. I was able to familiarize myself with these technologies and approaches during my studies. Additional research and practice allowed me to develop the skills. Refining existing skills and acquiring new ones is my highest priority.
-                                    </p>                  
-                                    <div class="m-main-about-infobox-skills-advanced">
-                                        <h2>Advanced</h2>
-                                        <div class="icons">
-                                            <div class="icons-box"> 
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/html5.png" alt="HTML5" title="HTML5"/>
-                                                </div>                                               
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/css3.png" alt="CSS3" title="CSS3"/>
-                                                </div>                                               
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/sass.png" alt="SASS" title="SASS"/>
-                                                </div>                                               
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/php.png" alt="PHP" title="PHP"/>  
-                                                </div>                                                                                                                       
+                                    </p>                               
+                                    <div class="icons">
+                                        <div class="icons-box"> 
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/html5.png" alt="HTML5" title="HTML5"/>
+                                            </div>                                               
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/css3.png" alt="CSS3" title="CSS3"/>
+                                            </div>                                               
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/sass.png" alt="SASS" title="SASS"/>
+                                            </div>                                               
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/php.png" alt="PHP" title="PHP"/>  
+                                            </div>                                                                                                                       
+                                        </div>
+                                        <div class="icons-box">   
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/javascript.png" alt="JAVASCRIPT" title="JAVASCRIPT"/>
+                                            </div>                                             
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/jquery.png" alt="JQUERY" title="JQUERY"/>
+                                            </div>                                             
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/symfony.png" alt="SYMFONY" title="SYMFONY"/> 
+                                            </div>  
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/mysql.png" alt="MYSQL" title="MYSQL"/>
+                                            </div>                                                                                                                                 
+                                        </div>                                                                                                                                                       
+                                        <div class="icons-box">                                                
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/bootstrap.png" alt="BOOTSTRAP" title="BOOTSTRAP"/>
                                             </div>
-                                            <div class="icons-box">   
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/javascript.png" alt="JAVASCRIPT" title="JAVASCRIPT"/>
-                                                </div>                                             
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/jquery.png" alt="JQUERY" title="JQUERY"/>
-                                                </div>                                             
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/symfony.png" alt="SYMFONY" title="SYMFONY"/> 
-                                                </div>                                                                                                                                   
-                                            </div>                                                                                                                                                       
-                                        </div>
-                                    </div>                    
-                                    <div class="m-main-about-infobox-skills-good">
-                                        <h2>Good</h2>
-                                        <div class="icons">
-                                            <div class="icons-box">
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/mysql.png" alt="MYSQL" title="MYSQL"/>
-                                                </div>
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/bootstrap.png" alt="BOOTSTRAP" title="BOOTSTRAP"/>
-                                                </div>
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/gulp.PNG" alt="GULP" title="GULP"/>  
-                                                </div>
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/wordpress.PNG" alt="WORDPRESS" title="WORDPRESS"/>   
-                                                </div>                                                                                  
-                                            </div>                                                                                                                                                                                                  
-                                        </div>
-                                        <div class="icons">
-                                            <div class="icons-box">
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/github.jpg" alt="GITHUB" title="GITHUB"/>
-                                                </div>                                                      
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/vsc.png" alt="VISUAL STUDIO CODE" title="VISUAL STUDIO CODE"/>
-                                                </div>                                                      
-                                            </div>                                                                                                                                                                                                  
-                                        </div>
-                                    </div>                    
-                                    <div class="m-main-about-infobox-skills-basic">
-                                        <h2>Basics or in learning process</h2>
-                                        <div class="icons">   
-                                            <div class="icons-box"> 
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/react.png" alt="REACT" title="REACT"/>
-                                                </div>                                      
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/photoshop.png" alt="PHOTOSHOP" title="PHOTOSHOP"/>
-                                                </div>                                      
-                                                <div class="icons-box-img">
-                                                    <img src="dist/img/icons/illustrator.png" alt="ILLUSTRATOR" title="ILLUSTRATOR"/> 
-                                                </div>                                       
-                                            </div>                         
-                                        </div>
-                                    </div>                                    
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/gulp.PNG" alt="GULP" title="GULP"/>  
+                                            </div>
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/wordpress.PNG" alt="WORDPRESS" title="WORDPRESS"/>   
+                                            </div>
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/github.jpg" alt="GITHUB" title="GITHUB"/>
+                                            </div>                                                                                                                                                                                                                               
+                                        </div>                                        
+                                        <div class="icons-box">                                                                                                 
+                                            <div class="icons-box-img">
+                                                <img src="dist/img/icons/vsc.png" alt="VISUAL STUDIO CODE" title="VISUAL STUDIO CODE"/>
+                                            </div>                                                      
+                                        </div>                             
+                                    </div>                                                                       
                                 </div>
                             </div>                    
                         </div>                  
                     </div>  
                 </div>      
+            </section>
+            <section class="m-main-projects" id="projects">
+                <div class="wrapper">
+                    <h1>Portfolio</h1>
+                    <p>
+                        Here you will find an overview of all relevant and meaningful projects so far.
+                    </p>
+                    <div class="m-portfolio-projects" id="m-portfolio-projects">
+                        <div class="row" id="project-row">
+                            <!--filled dynamique via class Project and method createProject-->
+                        </div>
+                        <p></p>
+                    </div>                                         
+                </div>
+            </section>       
+            <section class="m-main-contact" id="contact">
+                <div class="wrapper">
+                    <h1>Contact</h1>
+                    <p>
+                        Here you will find an overview of all relevant and meaningful projects so far.
+                    </p>                                         
+                </div>
             </section>       
         </main>
         <footer class="l-footer">

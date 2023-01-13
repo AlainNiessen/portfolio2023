@@ -21,31 +21,23 @@
             }  
             .cv {
                 text-align: center;
-            }
-            .m-main-about-infobox-skills-advanced, .m-main-about-infobox-skills-good, .m-main-about-infobox-skills-basic {
-                h2 {
-                    font-size: 1.8rem;
-                    text-align: center;
-                    color: map-get($map: $colors, $key: 'main2');  
-                    margin: 2rem 0 2rem 0;  
-                }
-                .icons {
+            }           
+            .icons {
+                display: flex;
+                flex-direction: column;
+                .icons-box {
                     display: flex;
-                    flex-direction: column;
-                    .icons-box {
-                        display: flex;
-                        margin: 1rem 0;
-                        .icons-box-img{
-                            flex: 0.25;
-                            text-align: center;
-                            img {                              
-                                width: 3rem;
-                                height: 3rem;                                
-                            }
-                        }                        
-                    }                    
-                }
-            }
+                    margin: 1rem 0;
+                    .icons-box-img{
+                        flex: 0.25;
+                        text-align: center;
+                        img {                              
+                            width: 2.5rem;
+                            height: 2.5rem;                                
+                        }
+                    }                        
+                }                    
+            }            
         }
         .m-main-about-infobox-personel {                      
             .m-main-about-infobox-social {
@@ -80,10 +72,10 @@
 }
 
 
-//media query
-//Media Query for smartphone => tablette
-@media screen and (min-width: 1200px) {
-    .m-main-about {
-        height: calc(100vh - 8vh);          
-    } 
-} 
+// //media query
+// //Media Query for smartphone => tablette
+// @media screen and (min-width: 1200px) {
+//     .m-main-about {
+//         height: calc(100vh - 8vh);          
+//     } 
+// } 
