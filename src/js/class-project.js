@@ -115,13 +115,7 @@ class Project {
         let btnCodeContentBox = document.createTextNode(this.titleCodeLink);
         btnCode.append(btnCodeContentBox);
         buttonBox.append(btnWeb, btnCode);
-        projectInfobox.append(buttonBox);
-
-
-        
-        
-       
-        
+        projectInfobox.append(buttonBox);        
     }
 }
 

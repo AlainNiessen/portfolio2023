@@ -33,6 +33,7 @@
   "homepage": "https://github.com/AlainNiessen/Portfolio#readme",
   "dependencies": {
     "flag-icons": "^6.6.6",
-    "gulp-pump": "0.0.2"
+    "gulp-pump": "0.0.2",
+    "jquery": "^3.6.3"
   }
 }

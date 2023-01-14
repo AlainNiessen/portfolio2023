@@ -54,7 +54,7 @@ include_once "translation.php";
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#contact">
                                 <?php echo $menu_contact; ?>
                             </a>
                         </li>
@@ -218,20 +218,69 @@ include_once "translation.php";
                     </div>                                         
                 </div>
             </section>       
-            <section class="m-main-contact" id="contact">
+            <section class="m-contact" id="contact">
                 <div class="wrapper">
                     <h1>Contact</h1>
-                    <p>
-                        Here you will find an overview of all relevant and meaningful projects so far.
-                    </p>                                         
-                </div>
-            </section>       
+                    <div class="m-contact-container">                           
+                        <div class="m-contactForm">
+                            <p>"Bitte beachten Sie, dass alle Felder obligatorisch sind und Ihre Email nur genutzt wird zum Antworten!</p>
+                            <form class="m-formContact" id="form" data-lang=<?php echo $lang ?>>
+                                <div class="box_name">
+                                    <p class="error-input">Bitte geben Sie Ihren Namen ein</p>
+                                    <input type="text" name="name" id="name" placeholder="Name" />                                            
+                                </div>                                        
+                                <div class="box_email">
+                                    <p class="error-input">Bitte geben Sie eine korrekte Email ein</p>
+                                    <input type="email" name="email" id="email" placeholder="E-mail" />                                            
+                                </div>
+                                <div class="box_subject">
+                                    <p class="error-input">Bitte geben Sie einen Betreff ein</p>
+                                    <input type="text" name="subject" id="subject" placeholder="Betreff" />                                            
+                                </div>
+                                <div class="box_message">
+                                    <p class="error-input">Bitte geben Sie Ihre Nachricht ein</p>
+                                    <textarea placeholder="Nachricht" id="message" name="message"></textarea>                                            
+                                </div>                                        
+                                <button type="submit" id="submit" class="btn btn-primary btn-custom">Absenden</button>
+                                <div id="messageResultat" class="messageResultat">
+                                    <div id="messageResultatContent" class="messageResultatContent"></div>
+                                </div>
+                            </form>
+                        </div>                        
+                    </div>                                                      
+                </div>           
+            </section>  
         </main>
         <footer class="l-footer">
-          
+            <div class="wrapper">
+                <div class="l-footer-info">                    
+                    <div class="l-footer-info-contactBox">
+                        <h2>Bla</h2>
+                        <div class="l-footer-info-contactBox-position">                 
+                            <div class="l-footer-info-infoContact"> 
+                                <i class="fas fa-phone"></i>  
+                                <a href="tel:+32498415694" title="Tel">++32 (0)498/41.56.94</a>                                           
+                            </div>
+                            <div class="l-footer-info-infoContact"> 
+                                <i class="fas fa-envelope"></i>  
+                                <a href="mailto:alain_niessen@hotmail.com" title="Mail">alain_niessen@hotmail.com</a>                                           
+                            </div>
+                        </div>                                
+                    </div>                
+                    <div class="l-footer-copyright">
+                        <p>
+                            All icons by <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> and <a href="https://www.klipartz.com/" target="_blank">Klipartz</a>
+                        </p>
+                        <p>
+                            Copyright <i class="far fa-copyright"></i> 2021 All rights reserved by <span class="text-decoration">Alain Niessen</span>
+                        </p>
+                    </div>                                 
+                </div>
+            </div>            
         </footer>
       
     <!--Implication Javascript-->
+    <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/min-all.js"></script>
     <?php
         } else {

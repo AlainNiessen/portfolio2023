@@ -888,7 +888,7 @@ nav {
 /* --- Portfolio Style --- */
 .m-main-projects {
   background-color: white;
-  height: 100vh;
+  height: auto;
   scroll-margin-top: 8vh;
   margin-top: 3rem;
 }
@@ -1023,5 +1023,147 @@ nav {
     width: 100%;
     max-width: 80%;
     margin: 0 auto;
+  }
+}
+/* --- CONTACT STYLE --- */
+.m-contact {
+  background-color: white;
+  scroll-margin-top: 8vh;
+  position: relative;
+  height: 100vh;
+}
+.m-contact h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(0, 122, 126);
+  padding-top: 2rem;
+}
+.m-contact .m-contactForm h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(0, 122, 126);
+  margin: 2rem 0 1rem 0;
+}
+.m-contact .m-contactForm p {
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 50%;
+  margin: 1rem auto;
+  text-align: center;
+  color: rgb(0, 122, 126);
+}
+.m-contact .m-contactForm .m-formContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 80%;
+  margin: 2rem auto;
+}
+.m-contact .m-contactForm .m-formContact div {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.m-contact .m-contactForm .m-formContact div input::-webkit-input-placeholder, .m-contact .m-contactForm .m-formContact div textarea::-webkit-input-placeholder {
+  color: rgb(0, 122, 126);
+}
+.m-contact .m-contactForm .m-formContact div input::-moz-placeholder, .m-contact .m-contactForm .m-formContact div textarea::-moz-placeholder {
+  color: rgb(0, 122, 126);
+}
+.m-contact .m-contactForm .m-formContact div input:-ms-input-placeholder, .m-contact .m-contactForm .m-formContact div textarea:-ms-input-placeholder {
+  color: rgb(0, 122, 126);
+}
+.m-contact .m-contactForm .m-formContact div input::-ms-input-placeholder, .m-contact .m-contactForm .m-formContact div textarea::-ms-input-placeholder {
+  color: rgb(0, 122, 126);
+}
+.m-contact .m-contactForm .m-formContact div input::placeholder, .m-contact .m-contactForm .m-formContact div textarea::placeholder {
+  color: rgb(0, 122, 126);
+}
+.m-contact .m-contactForm .m-formContact div input, .m-contact .m-contactForm .m-formContact div textarea {
+  width: 80%;
+  border: 0.1rem solid rgb(0, 122, 126);
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+}
+.m-contact .m-contactForm .m-formContact div input {
+  height: 2rem;
+}
+.m-contact .m-contactForm .m-formContact div textarea {
+  height: 10rem;
+  font-family: "Roboto", sans-serif;
+}
+.m-contact .m-contactForm .m-formContact div p {
+  width: 80%;
+  font-size: 0.8rem;
+  margin: 0.5rem auto 0.3rem auto;
+  color: red;
+  display: none;
+}
+.m-contact .m-contactForm .m-formContact button {
+  cursor: pointer;
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  background-color: white;
+  color: rgb(0, 122, 126);
+  border: 0.05rem solid rgb(0, 122, 126);
+  border-radius: 0.5rem;
+}
+.m-contact .m-contactForm .m-formContact button:hover {
+  background-color: rgb(0, 122, 126);
+  color: white;
+}
+.m-contact .m-contactForm .m-formContact .messageResultat {
+  position: absolute;
+  display: none;
+  width: 20rem;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 0.4rem;
+  z-index: 99999;
+  font-size: 3rem;
+}
+.m-contact .m-contactForm .m-formContact .messageResultat .messageResultatContent {
+  padding-top: 2rem;
+  width: inherit;
+  height: inherit;
+}
+.m-contact .m-contactForm .m-formContact .messageResultat .messageResultatContent p {
+  display: block;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .m-contact {
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+  .m-contact h1 {
+    margin-bottom: 2rem;
+  }
+  .m-contact .m-contactForm .m-formContact {
+    max-width: 60%;
+  }
+  .m-contact .m-contactForm .m-formContact button {
+    max-width: 40%;
   }
 }

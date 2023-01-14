@@ -1,5 +1,6 @@
 /* --- MAIN ---*/
 
+/* STOCK LANGUAGE PARAMETER IN SESSION STORAGE*/
 // retrieve data-lang for translations in class projet (titles, description)
 let flags = document.querySelectorAll('.flag');
 
@@ -17,7 +18,7 @@ flags.forEach(flag => {
     })
 })
 
-// creating projects
+/* CREATING PROJECTS */
 let language = sessionStorage.getItem("lang");
 let descriptionPortfolio = "";
 let descriptionSoap = "";
@@ -71,11 +72,12 @@ let projects = [
     },    
 ]
 
-// looping the project-array and creating new projects in every iteration
+/* CREATING PROJECTS VIA CLASS PROJECT */
 projects.forEach((project) => {
     new Project(project);
 }); 
 
+/* ANIMATION ON SIDE OPEN - CLOSE INFOBOX PROJECT */
 // animation open project
 let projectsPortfolio = document.querySelectorAll('.m-main-project');
 
@@ -106,4 +108,7 @@ closeIcons.forEach(icon => {
         projectDescription.classList.remove("show");       
     })    
 });
+
+
+
 
