@@ -1,4 +1,4 @@
-/* --- NAVIGATION BAR STYLE --- */
+// /* --- NAVIGATION BAR STYLE --- */
 header {
     position: fixed;
     z-index: 900;
@@ -15,7 +15,7 @@ nav {
 }
 
 .logo {
-    width: 30%;
+    width: 50%;  
     svg {  
         cursor: pointer;                                  
         width: 15rem;        
@@ -29,34 +29,67 @@ nav {
                 }
             }                                                                  
         }                        
-    } 
-}        
+    }       
+} 
 
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 8vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    a {
-        color: rgb(230, 230, 230);
-        text-decoration: none;
-        letter-spacing: 0.2rem;
-       // font-weight: bold;
-        font-size: .8rem;
-    }
-    li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-    }
+body {
+    overflow-x: hidden; // for hide the menu out of screen
 }
 
+.nav-links {    
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($map: $colors, $key: "main2");
+    width: 100%;
+    transform: translateX(100%); // will move the menu out of screen
+    transition: transform 500ms ease-in; 
+    .center-links {
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        padding: 1rem 0;            
+    } 
+    i {
+        color: map-get($map: $colors, $key: 'main1');
+    }   
+    a {        
+        color: map-get($map: $colors, $key: 'main1');
+        text-decoration: none;
+        letter-spacing: 0.2rem;
+        font-size: 1.1rem;              
+    }    
+    .nav-links-link {
+        position: relative;           
+        &:hover::before, &.active::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: .05rem;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: map-get($map: $colors, $key: 'main1');
+        }
+    }
+    // add class for Hamburger-Animation
+    &.nav-active {
+        transform: translateX(0%);
+    }
+}
 .hamburger {
-    display: none;
+    display: block;
     width: 2rem;
     height: 1.5rem;
     position: relative;
@@ -95,11 +128,31 @@ nav {
             top: 1.5rem;
         }
     }
+    // toggle class for Hamburger to cross and back
+    &.cross {
+        .line1 {
+            top: 0.75rem;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+        .line2 {
+            opacity: 0;
+            left: -60px;
+        }
+        .line3 {
+            top: 0.75rem;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+    }
 }
 .flag {   
     padding: .2rem;
-    width: 1.5rem;
-    //height: 2.5vh;   
+    width: 2rem;
     .fib {
         width: 100%;
         aspect-ratio: 4;
@@ -110,88 +163,216 @@ nav {
 }
 
 
-//Media Query
-@media screen and (max-width: 992px) {
-    .logo {
-        svg {
-            width: 11rem;
-        }
-    }
-    .nav-links {          
-        a {
-            font-size: .7rem;
-        }
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .logo {
-        width: 50%;        
-    } 
-    body {
-        overflow-x: hidden; // for hide the menu out of screen
+//MEDIA QUERY 768px
+@media screen and (min-width: 768px) {
+    header {
+        width: 18rem;
+        height: 100vh;
     }
-    .nav-links {    
-        position: absolute;
-        right: 0;
-        height: 92vh;
-        top: 8vh;
+    nav {
+        width: 100%;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: map-get($map: $colors, $key: "main2");
-        width: 50%;
-        transform: translateX(100%); // will move the menu out of screen
-        transition: transform 500ms ease-in;
+        min-height: 100vh;
+    }
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+ 
+    }
+    .nav-links {
+        width: 100%;
+        position: static;
+        transform: translateX(0);
+        padding-left: 2rem;
         li {
-            opacity: 0;
-        }
-        a {
-            font-size: .9rem;
-        }
-        // add class for Hamburger-Animation
-        &.nav-active {
-            transform: translateX(0%);
+            opacity: 1;
         }
     }
     .hamburger {
-        display: block;
-        // toggle class for Hamburger to cross and back
-        &.cross {
-            .line1 {
-                top: 0.75rem;
-                -webkit-transform: rotate(135deg);
-                -moz-transform: rotate(135deg);
-                -o-transform: rotate(135deg);
-                transform: rotate(135deg);
-            }
-            .line2 {
-                opacity: 0;
-                left: -60px;
-            }
-            .line3 {
-                top: 0.75rem;
-                -webkit-transform: rotate(-135deg);
-                -moz-transform: rotate(-135deg);
-                -o-transform: rotate(-135deg);
-                transform: rotate(-135deg);
-            }
-        }
+        display: none;
     }
 }
+    
 
 
 
-// Menu Animation Fade
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
 
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }    
-}
+
+
+
+
+
+
+
+// .logo {
+//     width: 30%;
+//     svg {  
+//         cursor: pointer;                                  
+//         width: 15rem;        
+//         g {  
+//             polygon {
+//                 fill: map-get($map: $colors, $key: 'main1');
+//             } 
+//             g {
+//                 path {
+//                     fill: map-get($map: $colors, $key: 'main1');
+//                 }
+//             }                                                                  
+//         }                        
+//     } 
+// }        
+
+// .nav-links {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     height: 8vh;
+//     width: 100%;
+//     padding: 0;
+//     margin: 0;
+//     a {
+//         color: rgb(230, 230, 230);
+//         text-decoration: none;
+//         letter-spacing: 0.2rem;
+//        // font-weight: bold;
+//         font-size: .8rem;
+//     }
+//     li {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         list-style: none;
+//     }
+// }
+
+// .hamburger {
+//     display: none;
+//     width: 2rem;
+//     height: 1.5rem;
+//     position: relative;
+//     -webkit-transform: rotate(0deg);
+//     -moz-transform: rotate(0deg);
+//     -o-transform: rotate(0deg);
+//     transform: rotate(0deg);
+//     -webkit-transition: 0.5s ease-in-out;
+//     -moz-transition: 0.5s ease-in-out;
+//     -o-transition: 0.5s ease-in-out;
+//     transition: 0.5s ease-in-out;
+//     cursor: pointer;
+//     div {
+//         position: absolute;
+//         height: 0.20rem;
+//         width: 100%;
+//         background: rgb(230, 230, 230);
+//         border-radius: 0.4rem;
+//         opacity: 1;
+//         left: 0;
+//         -webkit-transform: rotate(0deg);
+//         -moz-transform: rotate(0deg);
+//         -o-transform: rotate(0deg);
+//         transform: rotate(0deg);
+//         -webkit-transition: 0.25s ease-in-out;
+//         -moz-transition: 0.25s ease-in-out;
+//         -o-transition: 0.25s ease-in-out;
+//         transition: 0.25s ease-in-out;
+//         &:nth-child(1) {
+//             top: 0rem;
+//         }
+//         &:nth-child(2) {
+//             top: 0.75rem;
+//         }
+//         &:nth-child(3) {
+//             top: 1.5rem;
+//         }
+//     }
+// }
+// .flag {   
+//     padding: .2rem;
+//     width: 1.5rem;
+//     //height: 2.5vh;   
+//     .fib {
+//         width: 100%;
+//         aspect-ratio: 4;
+//         background-size: contain;
+//         background-position: 50%;
+//         background-repeat: no-repeat;           
+//     }
+// }
+
+
+// //Media Query
+// @media screen and (max-width: 992px) {
+//     .logo {
+//         svg {
+//             width: 11rem;
+//         }
+//     }
+//     .nav-links {          
+//         a {
+//             font-size: .7rem;
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 768px) {
+//     .logo {
+//         width: 50%;        
+//     } 
+//     body {
+//         overflow-x: hidden; // for hide the menu out of screen
+//     }
+//     .nav-links {    
+//         position: absolute;
+//         right: 0;
+//         height: 92vh;
+//         top: 8vh;
+//         flex-direction: column;
+//         justify-content: space-around;
+//         align-items: center;
+//         background-color: map-get($map: $colors, $key: "main2");
+//         width: 50%;
+//         transform: translateX(100%); // will move the menu out of screen
+//         transition: transform 500ms ease-in;
+//         li {
+//             opacity: 0;
+//         }
+//         a {
+//             font-size: .9rem;
+//         }
+//         // add class for Hamburger-Animation
+//         &.nav-active {
+//             transform: translateX(0%);
+//         }
+//     }
+//     .hamburger {
+//         display: block;
+//         // toggle class for Hamburger to cross and back
+//         &.cross {
+//             .line1 {
+//                 top: 0.75rem;
+//                 -webkit-transform: rotate(135deg);
+//                 -moz-transform: rotate(135deg);
+//                 -o-transform: rotate(135deg);
+//                 transform: rotate(135deg);
+//             }
+//             .line2 {
+//                 opacity: 0;
+//                 left: -60px;
+//             }
+//             .line3 {
+//                 top: 0.75rem;
+//                 -webkit-transform: rotate(-135deg);
+//                 -moz-transform: rotate(-135deg);
+//                 -o-transform: rotate(-135deg);
+//                 transform: rotate(-135deg);
+//             }
+//         }
+//     }
+// }
+
+
+
+
 

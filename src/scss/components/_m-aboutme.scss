@@ -7,8 +7,7 @@
         color: map-get($map: $colors, $key: 'main2');
         padding-top: 2rem;        
     }
-    .m-main-about-infobox{
-        display: flex;       
+    .m-main-about-infobox{   
         h1 {
             font-size: 2.5rem;
         }
@@ -72,10 +71,10 @@
 }
 
 
-// //media query
-// //Media Query for smartphone => tablette
-// @media screen and (min-width: 1200px) {
-//     .m-main-about {
-//         height: calc(100vh - 8vh);          
-//     } 
-// } 
+//media query
+//Media Query for smartphone => tablette
+@media screen and (min-width: 768px) {
+    .m-main-about {
+        scroll-margin-top: 0;         
+    } 
+} 

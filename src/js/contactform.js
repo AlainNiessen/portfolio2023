@@ -75,9 +75,27 @@ function formSubmit (e) {
     //if error is false => request AJAX
     if(!error) {  
         requestAjax(PARAM);
-    }
-        
+    }        
 }
+
+//blur event on input (handling directly control over inputs)
+let formInputs = document.querySelectorAll('input');
+
+formInputs.forEach(element => {
+    element.addEventListener('blur', (e) => {
+        // retrieve element via its ID
+        let elementID = e.target.id;
+        let valueInput = document.getElementById(elementID).value;
+        
+        if (valueInput == "" || (elementID == "email" && !validateEmail(valueInput))) {           
+            changeBorderColor(`#${elementID}`, "red");
+            changeDisplay(`.box_${elementID} .error-input`, 'block');   
+        } else {
+            changeBorderColor(`#${elementID}`, "green");
+            changeDisplay(`.box_${elementID} .error-input`, 'none');
+        }    
+    })
+});
 
 // fonction qui contrôle si email est valide
 function validateEmail(email) {
@@ -133,7 +151,7 @@ function messageMail(data) {
 
     CONTENT.append(text, icon);
     // fadein - fadeout animation based on function fadeInOut
-    fadeInOut(PARENT, 200, 4000);
+    fadeInOut(PARENT, 200, 3500);
     // reset values and bordercolor of form inputs
     setTimeout(function() {
         resetForm();
@@ -169,3 +187,4 @@ function fadeInOut(elem, speed1, speed2) {
         } // end if
     }, speed1 );
 } 
+

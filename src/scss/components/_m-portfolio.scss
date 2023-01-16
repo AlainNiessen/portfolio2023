@@ -2,8 +2,7 @@
 .m-main-projects {
     background-color: map-get($map: $colors, $key: 'main1');
     height: auto; 
-    scroll-margin-top: 8vh; 
-    margin-top: 3rem; 
+    scroll-margin-top: 8vh;
     h1, h3, p {                 
         text-align: center;
         color: map-get($map: $colors, $key: 'main2');          
@@ -119,6 +118,14 @@
     }
 }
 
+
+
+//media query tablette to pc
+@media screen and (min-width: 768px) {
+    .m-main-projects {
+        scroll-margin-top: 0;
+    }
+}
 //media query tablette to pc
 @media screen and (min-width: 1200px) {
     .m-main-projects {
