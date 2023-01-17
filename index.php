@@ -132,7 +132,7 @@ include_once "translation.php";
         <!-- MAIN SECTION -->
         <main class="l-main">
             <!-- INTRO SECTION -->
-            <section class="m-main-intro" id="intro">                    
+            <section class="m-main-intro" id="intro">                
                 <div class="m-main-intro-text">
                     <h3>Hallo, mein Name ist</h3>
                     <h1>Alain Niessen</h1>
