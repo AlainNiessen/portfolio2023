@@ -4,6 +4,7 @@
     border: .1rem solid map-get($map: $colors, $key: 'main3');
     border-radius: 50%;
     position: absolute;
+    z-index: 999999;
     transition-duration: 100ms;
     transition-timing-function: ease-out;
     animation: cursorAnim .7s infinite alternate;
@@ -16,7 +17,8 @@
     border: .1rem solid map-get($map: $colors, $key: 'main3');
     opacity: .5;
     border-radius: 50%;
-    position: absolute;   
+    position: absolute; 
+    z-index: 999999;  
     transition-duration: 100ms;
     transition-timing-function: ease-out; 
     animation: cursorAnim2 .7s infinite alternate;

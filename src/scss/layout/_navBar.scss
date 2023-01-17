@@ -72,15 +72,10 @@ body {
     }    
     .nav-links-link {
         position: relative;           
-        &:hover::before, &.active::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: .05rem;
-            top: 80%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: map-get($map: $colors, $key: 'main1');
+        &:hover {
+            i {
+                color: map-get($map: $colors, $key: 'main3');
+            }  
         }
     }
     // add class for Hamburger-Animation

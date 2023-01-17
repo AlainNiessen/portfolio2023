@@ -32,17 +32,7 @@ const NAV_SLIDE = () => {
 NAV_SLIDE();
 
 
-if (NAV_LINKS.length) {
-    NAV_LINKS.forEach((link) => {
-      link.addEventListener('click', (e) => {
-        NAV_LINKS.forEach((link) => {
-            link.classList.remove('active');
-        });
-        //e.preventDefault();
-        link.classList.add('active');
-      });
-    });
-  }
+
 
 
 

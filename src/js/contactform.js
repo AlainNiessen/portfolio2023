@@ -80,6 +80,7 @@ function formSubmit (e) {
 
 //blur event on input (handling directly control over inputs)
 let formInputs = document.querySelectorAll('input');
+let formTextarea = document.querySelector('textarea');
 
 formInputs.forEach(element => {
     element.addEventListener('blur', (e) => {
@@ -96,6 +97,19 @@ formInputs.forEach(element => {
         }    
     })
 });
+formTextarea.addEventListener('blur', (e) => {
+    // retrieve element via its ID
+    let elementID = e.target.id;
+    let valueInput = document.getElementById(elementID).value;
+    
+    if (valueInput == "") {           
+        changeBorderColor(`#${elementID}`, "red");
+        changeDisplay(`.box_${elementID} .error-input`, 'block');   
+    } else {
+        changeBorderColor(`#${elementID}`, "green");
+        changeDisplay(`.box_${elementID} .error-input`, 'none');
+    }    
+})
 
 // fonction qui contrôle si email est valide
 function validateEmail(email) {

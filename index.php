@@ -75,7 +75,7 @@ include_once "translation.php";
                     </div>
                     <ul class="nav-links">
                         <div class="center-links">
-                        <li class="nav-links-link active">
+                        <li class="nav-links-link">
                             <i class="fa fa-home"></i>
                             <a href="#intro" >
                                 Home
@@ -169,7 +169,7 @@ include_once "translation.php";
                             <p>
                                 You can download my CV under the following link and get a detailed overview of my professional career, my experiences and my other interests:
                             </p>
-                            <div class="cv">
+                            <div class="center">
                                 <a href="#" download="#" class="btn btn-primary btn-custom">Download CV</a>
                             </div>                                                                       
                             <p>

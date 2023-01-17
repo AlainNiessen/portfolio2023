@@ -4,7 +4,9 @@ class Project {
     constructor (object) {
         this.img = object.img,
         this.title = object.title,
-        this.description = object.description,
+        this.longDescription = object.longDescription,
+        this.shortDescription = object.shortDescription,
+        this.moreBTN = object.moreBTN,
         this.technos = object.technos,
         this.titleTechno = object.titleTechno,
         this.demoLink = object.demoLink,
@@ -22,21 +24,14 @@ class Project {
         // create responsive container based on grid system in grid.scss
         let responsiveContainer = document.createElement('div');
         responsiveContainer.classList.add('col-12');
-        responsiveContainer.classList.add('col-md-6');
+        responsiveContainer.classList.add('col-md-12');
         responsiveContainer.classList.add('col-lg-6');
 
         // create project container
         let project = document.createElement('div');
         project.classList.add('m-main-project');
-        project.id = 'm-main-project-'+this.title;
-
-        let projectTitle = document.createElement('h3');
-        let titleContent = document.createTextNode(this.title);
-        projectTitle.append(titleContent);
-
-        let projectIllustration = document.createElement('div');
-        projectIllustration.classList.add('m-main-project-illustration');
-        
+        project.classList.add('animation');
+        project.id = 'm-main-project-'+this.title;        
 
         let projectImage = document.createElement('img');
         projectImage.classList.add('m-main-project-img');
@@ -44,14 +39,40 @@ class Project {
         projectImage.alt = this.title;
         projectImage.title = this.title;
 
-        let projectIcon = document.createElement('img');
-        projectIcon.classList.add('m-main-project-icon');
-        projectIcon.src = "dist/img/glasses.png";
-        projectIcon.alt = "glasses";
-        projectIcon.title = "glasses";
+        project.append(projectImage);
 
-        projectIllustration.append(projectImage, projectIcon);
-        project.append(projectTitle, projectIllustration);
+        let projectIllustration = document.createElement('div');
+        projectIllustration.classList.add('m-main-project-illustration');        
+
+        let projectTitle = document.createElement('h3');
+        let titleContent = document.createTextNode(this.title);
+        projectTitle.append(titleContent);
+
+        let projectShortDescription = document.createElement('p');
+        let shortDescriptionContent = document.createTextNode(this.shortDescription);
+        projectShortDescription.append(shortDescriptionContent);
+
+        let projectmoreBTNBox = document.createElement('div');
+        projectmoreBTNBox.classList.add('center');  
+
+        let projectmoreBTN = document.createElement('button');
+        projectmoreBTN.classList.add('btn');
+        projectmoreBTN.classList.add('btn-primary');
+        projectmoreBTN.classList.add('btn-custom');
+        projectmoreBTN.classList.add('m-main-project-more-btn');
+        projectmoreBTN.id = 'm-main-project-more-btn-'+this.title; 
+        let moreBTNContent = document.createTextNode(this.moreBTN);
+        projectmoreBTN.append(moreBTNContent);
+        projectmoreBTNBox.append(projectmoreBTN);
+
+        // let projectIcon = document.createElement('img');
+        // projectIcon.classList.add('m-main-project-icon');
+        // projectIcon.src = "dist/img/glasses.png";
+        // projectIcon.alt = "glasses";
+        // projectIcon.title = "glasses";
+
+        projectIllustration.append(projectTitle, projectShortDescription, projectmoreBTNBox);
+        project.append(projectIllustration);
         responsiveContainer.append(project);
         parentElement.append(responsiveContainer); 
          
@@ -70,6 +91,7 @@ class Project {
         exitBTN.classList.add('far');
         exitBTN.classList.add('fa-times-circle');
         exitBTN.classList.add('back-to-page');
+        exitBTN.classList.add('exit');
         exitBTN.id = 'back-to-page-'+this.title;
         projectInfobox.append(exitBTN);
 
@@ -80,7 +102,7 @@ class Project {
         projectInfobox.append(title);
 
         let description = document.createElement('p');
-        let descriptionContentBox = document.createTextNode(this.description);
+        let descriptionContentBox = document.createTextNode(this.longDescription);
         description.append(descriptionContentBox);
         projectInfobox.append(description);
 
