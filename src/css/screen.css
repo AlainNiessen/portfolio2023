@@ -443,6 +443,59 @@ ul {
   text-align: center;
 }
 
+.l-main {
+  position: relative;
+}
+.l-main .m-main-infobox-social {
+  position: fixed;
+  z-index: 99999;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 10rem;
+  background-color: rgb(0, 122, 126);
+  border: 0.1rem solid rgb(0, 122, 126);
+  -webkit-box-shadow: 0px 1px 3px rgb(80, 80, 80);
+  box-shadow: 0px 1px 3px rgb(80, 80, 80);
+}
+.l-main .m-main-infobox-social a {
+  width: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.l-main .m-main-infobox-social a i {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 1.5rem;
+}
+.l-main .m-main-infobox-social a i:hover {
+  color: rgb(223, 142, 20);
+}
+
 @media screen and (min-width: 768px) {
   .l-main {
     margin-left: 18rem;
@@ -886,36 +939,6 @@ body {
 .m-main-about .m-main-about-infobox .m-main-about-infobox-personel .icons .icons-box .icons-box-img img, .m-main-about .m-main-about-infobox .m-main-about-infobox-skills .icons .icons-box .icons-box-img img {
   width: 2.5rem;
   height: 2.5rem;
-}
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  max-width: 80%;
-  margin: 0 auto;
-  height: 2.5rem;
-}
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-social a {
-  width: 100%;
-  padding: 0;
-  height: 2.5rem;
-}
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-social a i {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  color: rgb(0, 122, 126);
-  font-size: 1.5rem;
-}
-.m-main-about .m-main-about-infobox .m-main-about-infobox-personel .m-main-about-infobox-social a i:hover {
-  color: rgb(223, 142, 20);
 }
 .m-main-about .m-main-about-infobox .m-main-about-infobox-skills {
   padding-bottom: 2rem;

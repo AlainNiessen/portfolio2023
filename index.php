@@ -131,10 +131,16 @@ include_once "translation.php";
         </header>
         <!-- MAIN SECTION -->
         <main class="l-main">
+            <div class="m-main-infobox-social">
+                <a href="https://www.facebook.com/alain.niessen.10" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/alain-niessen-84b8431b2/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.deviantart.com/silence-in-your-head" target="_blank" title="DeviantArt"><i class="fab fa-deviantart"></i></a>
+                <a href="https://github.com/AlainNiessen" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+            </div>
             <!-- INTRO SECTION -->
             <section class="m-main-intro" id="intro">                
                 <div class="m-main-intro-text">
-                    <h3>Hallo, mein Name ist</h3>
+                    <h3><?php echo $intro_hello; ?></h3>
                     <h1>Alain Niessen</h1>
                     <h2><?php echo $intro_title; ?></h2>
                     <p>Frontend / Backend</p>
@@ -154,38 +160,26 @@ include_once "translation.php";
             </section>        
             <section class="m-main-about" id="aboutme">
                 <div class="wrapper">
-                    <h1>About me</h1>
+                    <h1><?php echo $about_main_title; ?></h1>
                     <div class="m-main-about-infobox">                         
                         <div class="m-main-about-infobox-personel">                                   
                             <p>
-                                After graduating from high school, I first studied social education. After working in this field for about 16 years, I decided in 2019 to reorient myself professionally to become a web developer.
+                                <?php echo $about_text_part1; ?>
+                            </p>                            
+                            <p>
+                                <?php echo $about_text_part2; ?>
                             </p>
                             <p>
-                                I have always been interested in this area and during my studies, which I completed at the "Institut Saint Laurent" in Liège/Belgium, it quickly became clear that I had made the right decision.
-                            </p>
-                            <p>
-                                With a great thirst for knowledge, I familiarized myself with the various aspects and technologies of web development and graduated in 2022 with great honors. An internship at "Cloth.Kreativbureau" in Eupen/Belgium gave me the first opportunity to work in a professional setting.
-                            </p>
-                            <p>
-                                You can download my CV under the following link and get a detailed overview of my professional career, my experiences and my other interests:
+                                <?php echo $about_text_download_cv; ?>
                             </p>
                             <div class="center">
                                 <a href="#" download="#" class="btn btn-primary btn-custom">Download CV</a>
-                            </div>                                                                       
-                            <p>
-                                You can see my social media presence under the following links:
-                            </p>
-                            <div class="m-main-about-infobox-social">
-                                <a href="https://www.facebook.com/alain.niessen.10" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-                                <a href="https://www.linkedin.com/in/alain-niessen-84b8431b2/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://www.deviantart.com/silence-in-your-head" target="_blank" title="DeviantArt"><i class="fab fa-deviantart"></i></a>
-                                <a href="https://github.com/AlainNiessen" target="_blank" title="Github"><i class="fab fa-github"></i></a>
-                            </div>
+                            </div>                                                    
                         </div>                   
                         <div class="m-main-about-infobox-skills">
                             <h1>Skills</h1>  
                             <p>
-                                Skills are an assessment of abilities. I was able to familiarize myself with these technologies and approaches during my studies. Additional research and practice allowed me to develop the skills. Refining existing skills and acquiring new ones is my highest priority.
+                                <?php echo $about_text_skills; ?>
                             </p>                               
                             <div class="icons">
                                 <div class="icons-box"> 
