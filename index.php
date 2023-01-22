@@ -160,7 +160,7 @@ include_once "translation.php";
             </section>        
             <section class="m-main-about" id="aboutme">
                 <div class="wrapper">
-                    <h1><?php echo $about_main_title; ?></h1>
+                    <h1 class="section-title"><?php echo $about_main_title; ?></h1>
                     <div class="m-main-about-infobox">                         
                         <div class="m-main-about-infobox-personel">                                   
                             <p>
@@ -177,7 +177,7 @@ include_once "translation.php";
                             </div>                                                    
                         </div>                   
                         <div class="m-main-about-infobox-skills">
-                            <h1>Skills</h1>  
+                            <h2>Skills</h2>  
                             <p>
                                 <?php echo $about_text_skills; ?>
                             </p>                               
@@ -236,9 +236,9 @@ include_once "translation.php";
             </section>
             <section class="m-main-projects" id="projects">
                 <div class="wrapper">
-                    <h1>Portfolio</h1>
+                    <h1 class="section-title">Portfolio</h1>
                     <p>
-                        Here you will find an overview of all relevant and meaningful projects so far.
+                        <?php echo $portfolio_text; ?>
                     </p>
                     <div class="m-portfolio-projects" id="m-portfolio-projects">
                         <div class="row" id="project-row">
@@ -250,28 +250,45 @@ include_once "translation.php";
             </section>       
             <section class="m-contact" id="contact">
                 <div class="wrapper">
-                    <h1>Contact</h1>
+                    <h1 class="section-title"><?php echo $contact_main_title ?></h1>
+                    <p>
+                        <?php echo $contact_text_intro; ?>
+                    </p>
+                    <div class="m-contact-icons">
+                        <div class="m-contact-icon-box">
+                            <i class="fa fa-phone"></i>
+                            <h4><?php echo $contact_phone; ?></h4>
+                            <a href="tel:+32498415694">0032/(0)498 41 56 94</a>
+                        </div>
+                        <div class="m-contact-icon-box">
+                            <i class="fa fa-envelope"></i>
+                            <h4><?php echo $contact_mail; ?></h4>
+                            <a href="mailto:alain_niessen@hotmail.com">alain_niessen@hotmail.com</a>
+                        </div>
+                    </div>
                     <div class="m-contact-container">                           
                         <div class="m-contactForm">
-                            <p>"Bitte beachten Sie, dass alle Felder obligatorisch sind und Ihre Email nur genutzt wird zum Antworten!</p>
-                            <form class="m-formContact" id="form" data-lang=<?php echo $lang ?>>
+                            <p>
+                                <?php echo $contact_form; ?>
+                            </p>
+                            <form class="m-formContact" id="form" data-lang=<?php echo $lang; ?>>
                                 <div class="box_name">
-                                    <p class="error-input">Bitte geben Sie Ihren Namen ein</p>
-                                    <input type="text" name="name" id="name" placeholder="Name" />                                            
+                                    <p class="error-input"><?php echo $contact_form_error_name; ?></p>
+                                    <input type="text" name="name" id="name" placeholder=<?php echo $contact_form_placeholder_name; ?> />                                            
                                 </div>                                        
                                 <div class="box_email">
-                                    <p class="error-input">Bitte geben Sie eine korrekte Email ein</p>
-                                    <input type="email" name="email" id="email" placeholder="E-mail" />                                            
+                                    <p class="error-input"><?php echo $contact_form_error_email; ?></p>
+                                    <input type="email" name="email" id="email" placeholder=<?php echo $contact_form_placeholder_email; ?> />                                            
                                 </div>
                                 <div class="box_subject">
-                                    <p class="error-input">Bitte geben Sie einen Betreff ein</p>
-                                    <input type="text" name="subject" id="subject" placeholder="Betreff" />                                            
+                                    <p class="error-input"><?php echo $contact_form_error_subject; ?></p>
+                                    <input type="text" name="subject" id="subject" placeholder=<?php echo $contact_form_placeholder_subject; ?> />                                            
                                 </div>
                                 <div class="box_message">
-                                    <p class="error-input">Bitte geben Sie Ihre Nachricht ein</p>
-                                    <textarea placeholder="Nachricht" id="message" name="message"></textarea>                                            
+                                    <p class="error-input"><?php echo $contact_form_error_message; ?></p>
+                                    <textarea placeholder=<?php echo $contact_form_placeholder_message; ?> id="message" name="message"></textarea>                                            
                                 </div>                                        
-                                <button type="submit" id="submit" class="btn btn-primary btn-custom">Absenden</button>
+                                <button type="submit" id="submit" class="btn btn-primary btn-custom"><?php echo $contact_form_btn; ?></button>
                                 <div id="messageResultat" class="messageResultat">
                                     <div id="messageResultatContent" class="messageResultatContent"></div>
                                 </div>

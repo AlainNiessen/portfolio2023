@@ -379,6 +379,10 @@ h3 {
   font-size: 1.1rem;
 }
 
+p {
+  font-size: 0.9rem;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -395,6 +399,10 @@ ul {
   width: 100%;
   max-width: 90%;
   margin: 0 auto;
+}
+
+.section-title {
+  margin: 2rem 0;
 }
 
 .center {
@@ -497,6 +505,9 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
   .l-main {
     margin-left: 18rem;
   }
@@ -943,6 +954,10 @@ body {
 .m-main-about .m-main-about-infobox .m-main-about-infobox-skills {
   padding-bottom: 2rem;
 }
+.m-main-about .m-main-about-infobox .m-main-about-infobox-skills h2 {
+  text-align: center;
+  color: rgb(0, 122, 126);
+}
 
 @media screen and (min-width: 768px) {
   .m-main-about {
@@ -1172,7 +1187,7 @@ body {
 .m-contact {
   background-color: white;
   position: relative;
-  height: 100vh;
+  height: auto;
   scroll-margin-top: 8vh;
 }
 .m-contact h1 {
@@ -1182,6 +1197,65 @@ body {
   color: rgb(0, 122, 126);
   padding-top: 2rem;
 }
+.m-contact p {
+  width: 100%;
+  max-width: 50%;
+  margin: 1rem auto;
+  text-align: center;
+  color: rgb(0, 122, 126);
+}
+.m-contact .m-contact-icons {
+  width: 100%;
+  max-width: 80%;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.m-contact .m-contact-icons .m-contact-icon-box {
+  width: 17rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.m-contact .m-contact-icons .m-contact-icon-box i, .m-contact .m-contact-icons .m-contact-icon-box h4, .m-contact .m-contact-icons .m-contact-icon-box a {
+  color: rgb(0, 122, 126);
+  margin: 0.2rem 0;
+}
+.m-contact .m-contact-icons .m-contact-icon-box i {
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+}
+.m-contact .m-contact-icons .m-contact-icon-box h4 {
+  font-size: 1.1rem;
+}
+.m-contact .m-contact-icons .m-contact-icon-box a, .m-contact .m-contact-icons .m-contact-icon-box i {
+  padding: 0;
+}
+.m-contact .m-contact-icons .m-contact-icon-box:hover a {
+  color: rgb(223, 142, 20);
+}
 .m-contact .m-contactForm h2 {
   font-size: 2rem;
   text-align: center;
@@ -1189,7 +1263,6 @@ body {
   margin: 2rem 0 1rem 0;
 }
 .m-contact .m-contactForm p {
-  font-size: 0.9rem;
   width: 100%;
   max-width: 50%;
   margin: 1rem auto;
@@ -1251,7 +1324,6 @@ body {
 }
 .m-contact .m-contactForm .m-formContact div p {
   width: 80%;
-  font-size: 0.8rem;
   margin: 0.5rem auto 0.3rem auto;
   color: red;
   display: none;
@@ -1287,6 +1359,22 @@ body {
   }
   .m-contact h1 {
     margin-bottom: 2rem;
+  }
+  .m-contact .m-contact-icons {
+    max-width: 25rem;
+    margin: 1rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .m-contact .m-contactForm .m-formContact {
     max-width: 60%;

@@ -2,7 +2,7 @@
 .m-contact {
     background-color: map-get($map: $colors, $key: 'main1');
     position: relative;
-    height: 100vh;  
+    height: auto;  
     scroll-margin-top: 8vh;
     h1 { 
         font-size: 3rem;                
@@ -11,8 +11,51 @@
         color: map-get($map: $colors, $key: 'main2');
         padding-top: 2rem;          
     }
+    p {
+        width: 100%;
+        max-width: 50%;
+        margin: 1rem auto;
+        text-align:center;
+        color: map-get($map: $colors, $key: 'main2');
+    }
+    .m-contact-icons {
+        width: 100%;
+        max-width: 80%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; 
+        .m-contact-icon-box {
+            width: 17rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            i, h4, a {
+                color: map-get($map: $colors, $key: 'main2');
+                margin: .2rem 0;
+            }
+            i {
+                font-size: 1.3rem;
+                padding-bottom: .5rem;
+            }
+            h4 {
+                font-size: 1.1rem;
+            }
+            a, i {
+                padding: 0;                
+            }
+            &:hover {
+                a {
+                    color: map-get($map: $colors, $key: 'main3');
+                }                
+            }            
+        }      
+    }
     
-    .m-contactForm {         
+    .m-contactForm {        
         h2 {
             font-size: 2rem;
             text-align:center;
@@ -20,7 +63,6 @@
             margin: 2rem 0 1rem 0;                       
         }
         p {
-            font-size: 0.9rem;
             width: 100%;
             max-width: 50%;
             margin: 1rem auto;
@@ -59,7 +101,6 @@
                 }
                 p {
                     width: 80%;
-                    font-size: 0.8rem;
                     margin: 0.5rem auto 0.3rem auto;
                     color:red;
                     display: none;
@@ -100,7 +141,15 @@
         scroll-margin-top: 0;    
         h1 {
             margin-bottom: 2rem;
-        }    
+        }   
+        .m-contact-icons {
+            max-width: 25rem;
+            margin: 1rem auto;
+            display: flex;
+            flex-direction: row; 
+            justify-content: space-around;
+            align-items: center; 
+        } 
         .m-contactForm {
             .m-formContact {
                 max-width: 60%;
