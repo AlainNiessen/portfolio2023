@@ -27,6 +27,8 @@ if( $lang == "en" || $lang == "fr" || $lang =="de"):
                   $about_text_part2 = "With a great thirst for knowledge, I familiarized myself with the various aspects and technologies of web development and graduated in 2022 with great distinction. An internship at \"Cloth.Kreativbureau\" in Eupen/Belgium gave me the first opportunity to work in a professional setting.";
                   $about_text_download_cv = "You can download my CV under the following link and get a detailed overview of my professional career, my experiences and my other interests:";
                   $about_text_skills = "\"Skills\" are an assessment of abilities. I was able to familiarize myself with these technologies and approaches during my studies. Additional research and practice allowed me to develop the skills. Refining existing skills and acquiring new ones is my highest priority.";
+                  $about_cv_link = "dist/files/cv/CV_aniessen_en.pdf";
+                  $about_cv_download = "CV_aniessen_en.pdf";
                   // PORTFOLIO SECTION
                   $portfolio_text = "Here you will find a compilation of all meaningful projects that I have created so far.";
                   // CONTACT SECTION
@@ -62,6 +64,8 @@ if( $lang == "en" || $lang == "fr" || $lang =="de"):
                   $about_text_part2 = "Doté d'une grande soif de connaissances, je me suis familiarisé avec les différents aspects et technologies du développement web et ai obtenu mon diplôme en 2022 avec grande distinction. Un stage chez \"Cloth.Kreativbureau\" à Eupen/Belgique m'a donné la première opportunité de travailler dans un environnement professionnel.";
                   $about_text_download_cv = "Sous le lien suivant, vous pouvez télécharger mon CV et obtenir un aperçu détaillé de mon parcours professionnel, de mes expériences et de mes autres centres d'intérêt :";
                   $about_text_skills = "\"Skills\" sont une évaluation des compétences. J'ai pu me familiariser avec ces technologies et ces approches au cours de mes études. La recherche et la pratique supplémentaires m'ont permis de développer les compétences. Affiner les compétences existantes et en acquérir de nouvelles est ma priorité absolue.";
+                  $about_cv_link = "dist/files/cv/CV_aniessen_fr.pdf";
+                  $about_cv_download = "CV_aniessen_fr.pdf";
                   // PORTFOLIO SECTION
                   $portfolio_text = "Vous trouverez ici une compilation de tous les projets significatifs que j'ai créés jusqu'à présent.";
                   // CONTACT SECTION
@@ -97,6 +101,8 @@ if( $lang == "en" || $lang == "fr" || $lang =="de"):
                   $about_text_part2 = "Mit großem Wissensdurst habe ich mich in die verschiedenen Aspekte und Technologien der Webentwicklung eingearbeitet und 2022 mit großer Auszeichnung abgeschlossen. Ein Praktikum bei \"Cloth.Kreativbureau\" in Eupen/Belgien gab mir die erste Möglichkeit, in einem professionellen Umfeld zu arbeiten.";
                   $about_text_download_cv = "Unter folgendem Link können Sie meinen Lebenslauf herunterladen und sich einen detaillierten Überblick über meinen beruflichen Werdegang, meine Erfahrungen und meine weiteren Interessen verschaffen:";
                   $about_text_skills = "\"Skills\" sind eine Einschätzung von Fähigkeiten. Mit folgenden Technologien und Ansätzen konnte ich mich während meines Studiums vertraut machen. Zusätzliche Recherchen und Praxis ermöglichten es mir, die Fähigkeiten auszubauen. Vorhandene Fähigkeiten zu verfeinern und neue zu erwerben, hat für mich höchste Priorität.";
+                  $about_cv_link = "dist/files/cv/CV_aniessen_de.pdf";
+                  $about_cv_download = "CV_aniessen_de.pdf";
                   // PORTFOLIO SECTION
                   $portfolio_text = "Hier finden Sie eine Zusammenstellung aller aussagekräftigen Projekte, die ich bisher erstellt habe.";
                   // CONTACT SECTION

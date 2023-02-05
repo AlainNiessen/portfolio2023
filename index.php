@@ -173,7 +173,7 @@ include_once "translation.php";
                                 <?php echo $about_text_download_cv; ?>
                             </p>
                             <div class="center">
-                                <a href="#" download="#" class="btn btn-primary btn-custom">Download CV</a>
+                                <a href="<?php echo $about_cv_link ?>" download="<?php echo $about_cv_download ?>" class="btn btn-primary btn-custom">Download CV</a>
                             </div>                                                    
                         </div>                   
                         <div class="m-main-about-infobox-skills">

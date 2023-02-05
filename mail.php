@@ -1,5 +1,7 @@
 <?php
 
+include_once "security_data.php";
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -35,22 +37,21 @@ if(!$error) {
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
     
-    //Server settings
-                      
-    $mail->IsSMTP();                                            //Send using SMTP
+    //Server settings                      
+    $mail->IsSMTP();               //Send using SMTP
     
-    $mail->Host = 'smtp.office365.com';                              //Set the SMTP server to send through              
-    $mail->Port = 587;                                          //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`  
+    $mail->Host = $mail_host;      //Set the SMTP server to send through              
+    $mail->Port = 587;             //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`  
     $mail->SMTPAuth = true;  
-    $mail->SMTPSecure = 'tls';                                //Enable SMTP authentication             
+    $mail->SMTPSecure = 'tls';     //Enable SMTP authentication             
     $mail->CharSet = 'UTF-8';
 
                   
-    $mail->Username   =  'alain_niessen@hotmail.com';           //SMTP username
-    $mail->Password   =  'pbE9wDGU';                            //SMTP password
-    $mail->SetFrom('alain_niessen@hotmail.com');                // When you're using SMTP from email services, they usually only allows you to send e-mails from your own address, not from any address)
+    $mail->Username   =  $mail_user;  //SMTP username
+    $mail->Password   =  $mail_pw;    //SMTP password
+    $mail->SetFrom($mail_user);       // When you're using SMTP from email services, they usually only allows you to send e-mails from your own address, not from any address)
 
-    $mail->AddAddress('alain_niessen@hotmail.com');     
+    $mail->AddAddress($mail_user);     
     $mail->addReplyTo($get_mail, $get_name);            
 
     $mail->FromName = 'Contact Portfolio';              
@@ -66,13 +67,13 @@ if(!$error) {
         $dataInfo['errorCode'] = "1";
         switch ($get_language) {
             case "en": 
-                $dataInfo['message'] = 'Message not send! Please try to contact me directly via "alain_niessen@hotmail.com"';
+                $dataInfo['message'] = 'Message not send! Please try to contact me directly via '.$mail_user;
                 break;
             case "fr": 
-                $dataInfo['message'] =  'Message pas envoyé! S\'il vous plaît contactez moi directement via "alain_niessen@hotmail.com"';
+                $dataInfo['message'] =  'Message pas envoyé! S\'il vous plaît contactez moi directement via '.$mail_user;
                 break;
             case "de":
-                $dataInfo['message'] = 'Nachricht nicht gesendet! Bitte kontaktieren Sie mich direkt via "alain_niessen@hotmail.com"';
+                $dataInfo['message'] = 'Nachricht nicht gesendet! Bitte kontaktieren Sie mich direkt via '.$mail_user;
                 break;
         }          
     } else{
