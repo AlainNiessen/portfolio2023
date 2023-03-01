@@ -218,7 +218,7 @@ include_once "translation.php";
                                         <img src="dist/img/icons/gulp.PNG" alt="GULP" title="GULP"/>  
                                     </div>
                                     <div class="icons-box-img">
-                                        <img src="dist/img/icons/wordpress.PNG" alt="WORDPRESS" title="WORDPRESS"/>   
+                                        <img src="dist/img/icons/wordpress.png" alt="WORDPRESS" title="WORDPRESS"/>   
                                     </div>
                                     <div class="icons-box-img">
                                         <img src="dist/img/icons/github.jpg" alt="GITHUB" title="GITHUB"/>

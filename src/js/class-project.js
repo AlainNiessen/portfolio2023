@@ -127,6 +127,7 @@ class Project {
         btnWeb.classList.add('btn-primary');
         btnWeb.classList.add('btn-custom');
         btnWeb.href = this.demoLink;
+        btnWeb.target = "_blank";
         let btnWebContentBox = document.createTextNode(this.titleDemoLink);
         btnWeb.append(btnWebContentBox);
         let btnCode = document.createElement('a');
@@ -134,6 +135,7 @@ class Project {
         btnCode.classList.add('btn-primary');
         btnCode.classList.add('btn-custom');
         btnCode.href = this.codeLink;
+        btnCode.target = "_blank";
         let btnCodeContentBox = document.createTextNode(this.titleCodeLink);
         btnCode.append(btnCodeContentBox);
         buttonBox.append(btnWeb, btnCode);
